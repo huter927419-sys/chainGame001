@@ -1,0 +1,17 @@
+{
+  "name": "racegame-tests",
+  "version": "1.0.0",
+  "description": "RaceGame合约测试套件",
+  "main": "comprehensive-test.js",
+  "scripts": {
+    "test": "node comprehensive-test.js",
+    "test:once": "node comprehensive-test.js 1",
+    "test:multiple": "node comprehensive-test.js 5",
+    "test:many": "node comprehensive-test.js 10"
+  },
+  "dependencies": {
+    "@ton/core": "^0.49.0",
+    "@ton/ton": "^13.0.0"
+  }
+}
+

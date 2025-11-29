@@ -1,0 +1,21 @@
+{
+  "name": "gamebet",
+  "version": "1.0.0",
+  "description": "TON区块链赛车竞速游戏",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "test:contracts": "cd contracts && npm test",
+    "build:contracts": "cd contracts && npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+

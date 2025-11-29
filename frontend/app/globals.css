@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --tg-theme-bg-color: #0a0a0a;
+  --tg-theme-text-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--tg-theme-bg-color, linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%));
+  color: var(--tg-theme-text-color, #ffffff);
+  min-height: 100vh;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Telegram Mini App 适配 */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+}
+
+/* 禁用文本选择（移动端优化） */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 允许输入框选择文本 */
+input,
+textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

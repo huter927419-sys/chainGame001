@@ -1,0 +1,42 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- 紫色/霓虹色F1赛车 -->
+  <defs>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a148c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0033;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 车身 -->
+  <ellipse cx="150" cy="150" rx="120" ry="60" fill="url(#purpleGradient)" />
+  <rect x="80" y="120" width="140" height="60" rx="30" fill="url(#purpleGradient)" />
+  
+  <!-- 前翼 - 粉色霓虹 -->
+  <rect x="60" y="140" width="40" height="8" fill="#ff00ff" filter="url(#glow)" />
+  <rect x="200" y="140" width="40" height="8" fill="#ff00ff" filter="url(#glow)" />
+  
+  <!-- 后翼 - 蓝色霓虹 -->
+  <rect x="220" y="120" width="20" height="60" fill="#00ffff" filter="url(#glow)" />
+  
+  <!-- 车轮 - 粉色霓虹环 -->
+  <circle cx="100" cy="180" r="25" fill="#1a1a1a" />
+  <circle cx="100" cy="180" r="20" fill="none" stroke="#ff00ff" stroke-width="2" filter="url(#glow)" />
+  <circle cx="200" cy="180" r="25" fill="#1a1a1a" />
+  <circle cx="200" cy="180" r="20" fill="none" stroke="#ff00ff" stroke-width="2" filter="url(#glow)" />
+  <circle cx="100" cy="120" r="25" fill="#1a1a1a" />
+  <circle cx="100" cy="120" r="20" fill="none" stroke="#ff00ff" stroke-width="2" filter="url(#glow)" />
+  <circle cx="200" cy="120" r="25" fill="#1a1a1a" />
+  <circle cx="200" cy="120" r="20" fill="none" stroke="#ff00ff" stroke-width="2" filter="url(#glow)" />
+  
+  <!-- 蓝色霓虹线条 -->
+  <line x1="100" y1="150" x2="200" y2="150" stroke="#00ffff" stroke-width="3" filter="url(#glow)" />
+  <line x1="120" y1="130" x2="180" y2="130" stroke="#00ffff" stroke-width="2" filter="url(#glow)" />
+</svg>
+

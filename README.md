@@ -37,8 +37,11 @@ gamebet/
 
 ## 安装和运行
 
-1. 安装依赖：
+### 前端应用
+
+1. 进入前端目录：
 ```bash
+cd frontend
 npm install
 ```
 
@@ -50,7 +53,29 @@ npm run dev
 3. 构建生产版本：
 ```bash
 npm run build
+npm start
 ```
+
+### Telegram Bot
+
+1. 进入 Bot 目录：
+```bash
+cd bot
+npm install
+```
+
+2. 配置环境变量（复制 `.env.example` 为 `.env` 并填入配置）
+
+3. 启动 Bot：
+```bash
+# 开发模式
+npm run dev
+
+# 生产模式
+npm run build && npm start
+```
+
+详细说明请查看 [bot/README.md](./bot/README.md)
 
 ## 合约部署
 
